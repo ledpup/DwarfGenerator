@@ -24,11 +24,14 @@ namespace DwarfGenerator
         public string LastName;
         public Sex Sex;
         public int Age;
+        public string Origin;
+        public string Residence;
         public int Generation;
         public Person LineageParent;
         public List<Person> Partners;
         public List<Person> Parents;
         public List<Person> Children;
+        public string Characteristic;
 
         public string Name { get { return FirstName + " " + LastName; } }
         public IEnumerable<Person> Siblings { get { return LineageParent != null ? LineageParent.Children.Where(x => x != this) : new List<Person>(); } }
